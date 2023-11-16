@@ -1,0 +1,48 @@
+@use '../styleFormRegistro/efectoAlarma';
+@use '../styleFormRegistro/formRegistro';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;800&family=Raleway&family=Rubik:wght@300;500;600;700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+.contenedor {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000046;
+    background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
+    background: linear-gradient(to right, #1CB5E0, #000046);
+
+    & .contenedor-registro {
+        display: flex;
+        position: relative;
+        background: #1CB5E0;
+        background: -webkit-linear-gradient(to right, #000046, #1CB5E0);
+        background: linear-gradient(to right, #000046, #1CB5E0);
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.3);
+        border-radius: 25px;
+        z-index: 1000;
+
+        & .imagen-registro {
+            padding: 20px;
+            border-radius: 25px;
+            background: #000046;
+            background: -webkit-linear-gradient(to right, #1CB5E0, #000046);
+            background: linear-gradient(to right, #1CB5E0, #000046);
+        }
+    }
+
+    & .form-registro {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

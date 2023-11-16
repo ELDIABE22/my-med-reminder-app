@@ -1,0 +1,57 @@
+@use '../styleInicio/bg-Inicio';
+@use '../styleInicio/buttom';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;400;500;700;800&family=Raleway&family=Rubik:wght@300;500;600;700&family=Titillium+Web:wght@200;300;400;600;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Raleway', sans-serif;
+    font-family: 'Rubik', sans-serif;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+body {
+    overflow-y: hidden;
+}
+
+.contenedor-texto {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & .filter {
+        position: relative;
+        text-align: center;
+        padding: 20px;
+        border-radius: 15px;
+        background: -webkit-linear-gradient(to right, #ffffff2c, #6dd4fa27, #297fb934);
+        background: linear-gradient(to right, #ffffff38, #6dd4fa33, #297fb93a);
+        box-shadow: 0 0 20px 3px rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(50px);
+        z-index: 10;
+        
+        & h1 {
+            font-size: 30px;
+            margin: 20px;
+            color: #003242;
+
+            & span {
+                color: #ffffff;
+            }
+        }
+
+        & .descripcion {
+            & p {
+                color: #ffffff;
+                text-align: start;
+                margin: 10px;
+                font-size: 24px;
+                font-weight: 500;
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+nav {
+    width: 15%;
+    height: 100vh;
+    padding: 15px 5px;
+}
+
+.contenedor-nav {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nombre-usuario {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    & img {
+        max-width: 26px;
+        max-height: 26px;
+    }
+
+    & h4 {
+        font-size: 15px;
+        text-align: center;
+    }
+}
+
+.contenedor-boton-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-nav {
+    text-align: center;
+    color: red;
+}

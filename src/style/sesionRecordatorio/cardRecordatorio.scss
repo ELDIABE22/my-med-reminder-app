@@ -1,0 +1,234 @@
+.plan {
+    min-width: 281.42px;
+    max-height: 385px;
+    border-radius: 16px;
+    box-shadow: 0px 10px 10px -5px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    background-color: #fff;
+    max-width: 300px;
+
+    strong {
+        font-weight: 600;
+        color: #425275;
+    }
+
+    .inner {
+        min-width: 221.422px;
+        max-height: 370px;
+        align-items: center;
+        padding: 20px;
+        padding-top: 40px;
+        background: #F8F9FD;
+        background: linear-gradient(0deg, rgb(255, 255, 255) 0%, rgb(244, 247, 251) 100%);
+        border-radius: 12px;
+        position: relative;
+        overflow: hidden;
+        overflow-y: auto;
+
+        .pricing {
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-color: #bed6fb;
+            border-radius: 99em 0 0 99em;
+            display: flex;
+            align-items: center;
+            padding: 0.625em 0.75em;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #425475;
+
+            small {
+                color: #707a91;
+                font-size: 0.75em;
+                margin-left: 0.25em;
+            }
+        }
+
+        .title {
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #425675;
+            margin-top: 1.3rem;
+        }
+
+        .features {
+            display: flex;
+            flex-direction: column;
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                margin-top: 0.1rem;
+            }
+
+            li+* {
+                margin-top: 0.75rem;
+            }
+
+            .icon {
+                background-color: #1FCAC5;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                color: #fff;
+                border-radius: 50%;
+                min-width: 20px;
+                min-height: 20px;
+
+                svg {
+                    width: 14px;
+                    height: 14px;
+                }
+            }
+        }
+
+        .info {
+            margin-top: 7px;
+
+            .textareaEdit {
+                margin-top: 15px;
+            }
+        }
+
+        .action {
+            width: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+    }
+}
+
+.btn-card-recordatorio {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border: none;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px 0.2px rgba(0, 0, 0, 0.35);
+    transition: 0.2s linear;
+    transition-delay: 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:hover {
+        width: 150px;
+        transition-delay: 0.2s;
+    }
+
+    &:hover>.paragraph {
+        visibility: visible;
+        opacity: 1;
+        transition-delay: 0.4s;
+    }
+
+    &:hover>.icon-wrapper .icon {
+        transform: scale(1.1);
+    }
+
+    &:hover>.icon-wrapper .icon path {
+        stroke: black;
+    }
+
+    .paragraph {
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        font-size: 18px;
+        margin-right: 20px;
+        padding-left: 20px;
+        transition: 0.2s linear;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .icon-wrapper {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .icon {
+        transform: scale(0.9);
+        transition: 0.2s linear;
+    }
+
+    .icon path {
+        stroke: #000;
+        stroke-width: 2px;
+        transition: 0.2s linear;
+    }
+}
+
+.checkboxLabel {
+    text-align: center;
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bolder;
+    user-select: none;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    background-color: white;
+    padding: 3px;
+    border-radius: 25px;
+
+    & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+
+        &:checked~.checkmark {
+            background-color: #00de00;
+            box-shadow: 0 0 10px #00ff00;
+        }
+    }
+}
+
+.checkmark {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 1.3em;
+    width: 1.3em;
+    border-radius: 1rem;
+    background-color: #004000;
+    transition: 0.1s;
+}
+
+
+/// ANIMACION IMG ALARMA RECORDATORIO ///
+.swal2-image {
+    animation: tada 1s ease infinite;
+}
+
+@keyframes tada {
+    0% {
+        transform: scale(1);
+    }
+    10%, 20% {
+        transform: scale(0.9) rotate(-3deg);
+    }
+    30%, 50%, 70%, 90% {
+        transform: scale(1.1) rotate(3deg);
+    }
+    40%, 60%, 80% {
+        transform: scale(1.1) rotate(-3deg);
+    }
+    100% {
+        transform: scale(1) rotate(0);
+    }
+}
